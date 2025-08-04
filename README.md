@@ -6,7 +6,7 @@ In this project, we:
 3. Use the loaded data to provide the 3 most popular tickets in the database.
 
 ## Project Files
-- Data Pipeline Mini Project [FINAL].py (main Python script)
+- data_pipeline.py (main Python script)
 - third_party_sales.csv (data file being loaded to the mySQL server)
 
 ## Instructions
@@ -29,10 +29,10 @@ file_path = os.path.join (base_dir, "third_party_sales.csv")
 load_third_party(conn, file_path)
 ```
 2. Inside the Python script, update the following section with your own MySQL credentials:
-   - Replace <username> with your MySQL username. As stated before, root is recommended
-   - Replace <password> with your MySQL password
-   - Replace <hostname> with localhost or your host
-   - Repace <database_name> with eventticket (or whatever you chose to name the database in the Create MySQL Database section
+   - Replace username with your MySQL username. As stated before, root is recommended
+   - Replace password with your MySQL password
+   - Replace hostname with localhost or your host
+   - Repace database_name with eventticket (or whatever you chose to name the database in the Create MySQL Database section
 ```
 def get_db_connection():
     connection = None
@@ -45,3 +45,16 @@ def get_db_connection():
     except Exception as error:
         print("Error while connecting to database for job tracker", error)
 ```
+3. Open a terminal or command prompt. Set work directory to the location where this project was downloaded to
+```
+cd C:\insert\folder\path\here
+```
+4. Once work directory has been set up correctly, run the script by typing the following in the command prompt
+```
+python data_pipeline.py
+```
+5. The output should look like the following:
+   
+   <img width="588" height="115" alt="image" src="https://github.com/user-attachments/assets/9eee359a-b202-4656-aaf3-2032d16cfa6b" />
+
+   
